@@ -1,0 +1,670 @@
+$desktop-max-width: 1200px;
+$desktop-max-width-large: 1200px;
+$font-lato: 'Lato', sans-serif; 
+$color-white: #ffffff;
+$color-black: #000000;
+$color-transparent: transparent;
+$color-up-vote: #2fbdb7;
+$color-down-vote: #ffb533;
+$color-intro-opinion: #7d645e;
+$color-text-footer: #333333;
+$color-message-notice: #ebebeb;
+$color-text-message-submit: rgba(51, 51, 51, 255);
+$full: 100%;
+$font-size-navbar-title: 2.67em;
+$font-size-navbar-menu-item: 1.5em;
+$font-size-opinion: 1.75em;
+$font-size-intro-vote-icons: 3em;
+$font-size-opinion-title: 5em;
+
+$font-size-body: 1em;
+$margin-menu-item: 2em;
+$wight-thin: 100;
+
+body{
+    font-family: $font-lato;
+    font-size: $font-size-body;
+}
+
+header::before{
+    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $full;
+    height: $full;
+    background: linear-gradient(0deg, $color-transparent, $color-black 100%) no-repeat;
+    opacity: 0.8;
+    
+
+}
+
+.header__toogle{
+    color: $color-white;
+}
+
+.custom-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__heading-site-name{
+    
+    color: $color-white;
+    font-size: $font-size-navbar-title;
+    text-align: left;
+
+}
+
+.header__menu-item{
+
+   
+    margin-right: $margin-menu-item;
+
+}
+
+
+.header__menu-item a{
+    color: $color-white;
+    font-weight: $wight-thin;
+    font-size: $font-size-navbar-menu-item;
+}
+
+.intro{
+    position: relative;
+}
+
+.intro__pope-francis-photo{
+    width: $full;
+}
+
+.intro__intro-opinion{
+
+    color: $color-white;
+
+    
+}
+
+.intro__question-begin{
+    font-weight: 300;
+}
+
+.intro__content-opinion{
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+
+.intro__content-opinion-title{
+    font-size: $font-size-opinion-title;
+}
+
+.intro__content-opinion p{
+
+    font-size: $font-size-opinion;
+    font-weight: 300;
+}
+
+p.intro__content-opinion-more-information{
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+p.intro__content-opinion-veredict{
+    font-weight: bold;
+}
+
+.intro-opinion__like-container{
+    padding: 20px;
+    background-color: $color-up-vote;
+    opacity: 0.95;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-opinion__dislike-container{
+    padding: 20px;
+    background-color: $color-down-vote;
+    opacity: 0.95;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-opinion__like{
+    font-size: $font-size-intro-vote-icons;
+    cursor: pointer;
+}
+
+.intro-opinion__dislike{
+    font-size: $font-size-intro-vote-icons;
+    cursor: pointer;
+}
+
+
+.intro__text-to-closing{
+    background: linear-gradient(to right, $color-transparent, $color-black 100%) no-repeat;
+    /*background-color: $color-black;*/
+    opacity: 0.35;
+    color: $color-message-notice;
+    text-align: right;
+    
+}
+
+
+p.intro__text-to-closing-info{
+    margin-top: 0;
+}
+
+.intro__days-to-closing::before {
+    left: 0px;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid $color-black;
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent;
+    content: " ";
+    position: absolute;
+    top: 15px;
+    opacity: 0.35;
+  
+}
+
+.intro__days-to-closing{
+    
+    background: linear-gradient(to right, $color-message-notice, $color-transparent 100%) no-repeat;
+    
+}
+
+.votes{
+    max-width: $desktop-max-width;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px dotted $color-text-footer;
+}
+
+.votes__message-notice{
+    position: relative;
+    background-color: $color-message-notice;
+    padding: 10px;
+}
+.left-side__first-line{
+    font-size: 1.6em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.left-side__second-line{
+    font-weight: bold;
+    font-size: 2.6em;
+    margin: 0;
+}
+
+.message-notice__right-side{
+    padding: 15px;
+}
+
+.right-side__text{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.votes__title{
+    font-weight: 300;
+    font-size: 3em;
+    color: $color-black;;
+}
+
+
+.kanye-wrapper{
+    background-image: url("../img/kanye.png");
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.kanye-wrapper::before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-image: linear-gradient(0deg,$color-black 40%, $color-transparent);
+    opacity: 0.35;
+}
+
+.mark-wrapper{
+    background-image: url("../img/mark.png");
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.mark-wrapper::before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-image: linear-gradient(0deg,$color-black 40%, $color-transparent);
+    opacity: 0.35;
+}
+
+.cristina-wrapper{
+    background-image: url("../img/cristina.png");
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.cristina-wrapper::before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-image: linear-gradient(0deg,$color-black 40%, $color-transparent);
+    opacity: 0.35;
+}
+
+.malala-wrapper{
+    background-image: url("../img/malala.png");
+    height: 600px;
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.malala-wrapper::before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-image: linear-gradient(0deg,$color-black 40%, $color-transparent);
+    opacity: 0.35;
+}
+
+
+.candidate-information{
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.candidate-information-title{
+    font-size: 3em;;
+    color: $color-white;
+    font-weight: 700;
+}
+
+.candidate-information-description{
+    width: 80%;
+    color: $color-white;
+    font-weight: 300;
+}
+
+
+
+
+.message-notice__close{
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    top: 10px
+}
+
+
+.votes__message-submit{
+    background-image: url("../img/bg-msg-submit.png");
+    height: 200px;
+    position: relative;
+
+}
+
+.votes__message-submit::after{
+    position: absolute;
+    content: '';
+    width: $full;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.8;
+
+}
+
+.message-submit__text{
+    position: absolute;
+    color: $color-text-message-submit;
+    top: 30px;
+    left: 30px;
+    font-size: 1.3em;
+    z-index: 1000;
+}
+
+
+.message-submit__btn-submit{
+
+    position: absolute;
+    display: block;
+    color: $color-text-message-submit;
+    top: 100px;
+    right:  150px;
+    font-size: 1.5em;
+    z-index: 1000;
+    border: 5px solid $color-black;
+    padding: 10px;
+    
+}
+
+.btn-view-full-report{
+    
+    display: inline-block;
+    color: $color-white;
+    font-size: 1em;
+    z-index: 1000;
+    border: 3px solid $color-white;
+    padding: 10px;
+   
+}
+
+.btn-view-full-report:hover{
+
+    color: $color-white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.time-ago{
+    color: $color-white;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.field-of-action{
+    color: $color-white;
+    font-size: 0.7em;
+    text-align: right;
+    margin: 0;
+
+}
+
+.message-submit__btn-submit:hover{
+    text-decoration: none;
+    color: $color-text-message-submit;
+    cursor: pointer;
+}
+
+.btn-vote-like-wrapper{
+    background-color: $color-up-vote;
+    padding: 20px;
+}
+
+.btn-vote-dislike-wrapper{
+    background-color: $color-down-vote;
+    text-align: right;
+    padding: 20px;
+}
+
+.btn-vote-like{
+    font-size: 1em;
+    color: $color-white;
+}
+
+.btn-vote-dislike{
+    font-size: 1em;
+    color: $color-white;
+}
+
+.btn-vote-dislike:hover{
+    
+    color: $color-white;
+    cursor: pointer;
+}
+
+.btn-vote-like:hover{
+    
+    color: $color-white;
+    cursor: pointer;
+}
+
+.like-dislikes-results{
+    color: $color-white;
+    font-size: 1em;
+    padding-left: 5px;
+}
+
+.footer__more-info{
+
+    
+    max-width: $desktop-max-width;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer__info-opciones{
+    padding: 0;
+}
+
+.footer__info-item{
+    
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.footer__info-item a{
+    font-weight: 300;
+    color: $color-text-footer;
+    font-size: $font-size-body;
+}
+
+.footer__social-networks{
+    padding: 0;
+}
+
+/*Phone*/
+@media screen and (min-width: 576px){
+
+    .message-submit__btn-submit{
+    
+        position: absolute;
+        display: inline-block;
+        color: $color-text-message-submit;
+        top: 100px;
+        right: 250px;
+        font-size: 1.5em;
+        z-index: 1000;
+        border: 5px solid $color-black;
+        padding: 10px;
+        
+        
+    }
+
+}
+
+
+/*Tablet min width*/
+@media screen and (min-width: 768px){
+
+    header::before{
+    
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $full;
+        height: $full;
+        background: linear-gradient(0deg, $color-transparent, $color-black 100%) no-repeat;
+        opacity: 0.5;
+        
+    
+    }
+
+    
+
+    .message-submit__btn-submit{
+    
+        position: absolute;
+        display: inline-block;
+        color: $color-text-message-submit;
+        top: 20px;
+        right: 50px;
+        font-size: 1.5em;
+        z-index: 1000;
+        border: 5px solid $color-black;
+        padding: 10px;
+        
+        
+    }
+
+
+    
+
+    
+
+}
+
+/*Desktop min width*/
+@media screen and (min-width: 992px){
+
+    .header__container{
+        max-width: $desktop-max-width;
+    }
+
+    .intro__intro-opinion{
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        color: $color-white;
+    }
+
+
+    .intro__closing-notice{
+       
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .message-notice__close{
+        display: inline-block;
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        font-size: 1.5em;
+        font-weight: 300;
+        top: 30px
+    }
+
+    .votes__message-submit{
+        background-image: url("../img/bg-msg-submit.png");
+        height: 100px;
+        position: relative;
+    
+    }
+
+    .votes__message-submit::after{
+        position: absolute;
+        content: '';
+        width: $full;
+        height: 100px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        opacity: 0.8;
+    
+    }
+
+    .message-submit__text{
+        position: absolute;
+        color: $color-text-message-submit;
+        top: 30px;
+        left: 30px;
+        font-size: 1.5em;
+        z-index: 1000;
+    }
+    
+    .message-submit__btn-submit{
+    
+        position: absolute;
+        display: inline-block;
+        color: $color-text-message-submit;
+        top: 20px;
+        right: 10px;
+        font-size: 1.5em;
+        z-index: 1000;
+        border: 5px solid $color-black;
+        padding: 10px;
+        
+        
+    }
+
+    .btn-vote-like, .btn-vote-dislike{
+        
+        font-size: 1.5em;
+    }
+    
+    .like-dislikes-results{
+        
+        font-size: 1.5em;
+        
+    }
+    
+
+    .footer__info-item{
+        display: inline-block;
+        text-decoration: none;
+        margin-right: $margin-menu-item;
+    }
+
+   
+
+}
+
+/*Desktop min width*/
+@media screen and (min-width: 1200px){
+
+    .header__container{
+        max-width: $desktop-max-width-large;
+    }
+
+    .intro__intro-opinion{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        color: $color-white;
+    }
+
+}
+
+

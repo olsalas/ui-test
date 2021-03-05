@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Zemoga UI Test</title>
+			
+			<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="assets/css/style.css">
+
+	</head>
+	<body>
+
+			<header class="fixed-top">
+
+				<div class="container header__container">
+
+					<nav  class="navbar navbar-expand-lg" role="navigation">
+						<h1 class="header__heading-site-name">Rule of Thumb.</h1>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<i class="fa fa-bars header__toogle" aria-hidden="true"></i>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto header__menu">
+								<li class="nav-item header__menu-item"><a href="trials.html" target="_blank">Past Trials</a></li>
+								<li class="nav-item header__menu-item"><a href="howItWorks.html" target="_blank"> How It Works</a></li>
+								<li class="nav-item header__menu-item"><a href="logInOrSignUp.html" target="_blank">Log In / Sign Up</a></li>
+								<li class="nav-item header__menu-item"><a href="#"><img src="assets/img/search.png" alt="Search Icon"></a></li>
+							</ul>
+						</div>
+					</nav>
+
+				</div>
+				
+
+			</header>
+			
+			<main>
+
+				<section class="intro">
+
+					<img src="assets/img/pope-francis.png" alt="pope-francis" class="intro__pope-francis-photo">
+
+					<div class="intro__intro-opinion">
+
+							<div class="intro__content-opinion">
+
+								<span class="intro__question-begin">What's your opinion on</span>
+								<h2 class="intro__content-opinion-title">Pope Francis?</h2>
+								<p>
+									He’s talking tough on clergy sexual abuse, but <br>
+									is he just another papal pervert protector? <br>
+									(thumbs down) or a true pedophile punishing <br>
+									pontiff? (thumbs up) 
+								</p>
+
+								<p class="intro__content-opinion-more-information mt-4"><i class="fa fa-wikipedia-w" aria-hidden="true"></i> More information</p>
+
+								<p class="intro__content-opinion-veredict mt-5">What's Your Verdict?</p>
+
+							</div>
+						  
+							<div class="custom-row">
+
+								<div class="intro-opinion__like-container">
+									<i class="fa fa-thumbs-up intro-opinion__like" aria-hidden="true"></i>
+								</div>
+
+								<div class="intro-opinion__dislike-container">
+									
+										<i class="fa fa-thumbs-down intro-opinion__dislike" aria-hidden="true"></i>
+									
+								</div>
+
+							</div>
+
+					</div>
+
+					<div class="intro__closing-notice custom-row">
+						
+						<div class="col-4 intro__text-to-closing">
+							<p class="intro__text-to-closing-info">CLOSING IN</p>
+						</div>
+
+						<div class="col-8 intro__days-to-closing">
+							<p class="intro__days-to-closing-info"><strong>22</strong> days</p>
+						</div>
+
+					</div>
+
+				</section>
+
+				<section class="votes mt-5">
+
+					<div class="votes__message-notice row  mb-5">
+
+						<div class="message-notice__left-side col-12 col-md-3">
+								<p class="left-side__first-line">Speak out. Be heard.</p>
+								<p class="left-side__second-line">Be counted</p>
+						</div>
+
+						<div class="message-notice__right-side col-12 col-md-9">
+								<p class="right-side__text">
+									Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. <br> 
+									It’s easy: You share your opinion, we analyze and put the data in a public report.
+								</p>
+
+							
+
+						</div>
+
+						<span class="message-notice__close">X</span>
+
+					</div>
+
+					<h3 class="votes__title">Previous Rulings</h3>
+
+					<!-- Vote Component -->
+					<div id="app" class="votes__vote-container row mt-3 mb-5">
+
+						
+
+						<div class="kanye-container col-12 col-md-6 mt-5">
+
+							<div class="kanye-wrapper">
+
+								<div class="candidate-information">
+
+									<div class="candidate-information-text ml-3 mr-3">
+
+										<h4 class="candidate-information-title">Kanye West</h4>
+										<p class="candidate-information-description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+
+										<div class="d-flex mt-2 flex-wrap">
+											<div><a class="btn-view-full-report">View Full Report</a></div>
+											<div class="ml-auto">
+												<p class="time-ago">1 month ago</p>
+												<p class="field-of-action">in Entertaiment</p>
+											</div>
+										</div>
+
+									</div>
+
+									
+									<div class="custom-row mt-5">
+										<div class="col-9 btn-vote-like-wrapper"><a class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a><span class="like-dislikes-results">64%</span></div>
+										<div class="col-3 btn-vote-dislike-wrapper"><span class="like-dislikes-results">36% </span><a class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a></div>
+									</div>
+									
+	
+								</div>
+
+							</div>
+
+
+						</div>
+
+
+						<div class="mark-container col-12 col-md-6 mt-5">
+
+							<div class="mark-wrapper">
+
+								<div class="candidate-information">
+
+									<div class="candidate-information-text ml-3 mr-3">
+
+										<h4 class="candidate-information-title">Mark Zuckerberg</h4>
+										<p class="candidate-information-description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+
+										<div class="d-flex mt-2 flex-wrap">
+											<div><a class="btn-view-full-report">View Full Report</a></div>
+											<div class="ml-auto">
+												<p class="time-ago">1 month ago</p>
+												<p class="field-of-action">in Business</p>
+											</div>
+										</div>
+
+									</div>
+
+									
+									<div class="custom-row mt-5">
+										<div class="col-3 btn-vote-like-wrapper"><a class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a><span class="like-dislikes-results">36%</span></div>
+										<div class="col-9 btn-vote-dislike-wrapper"><span class="like-dislikes-results">64% </span><a class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a></div>
+									</div>
+									
+	
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="cristina-container col-12 col-md-6 mt-5">
+
+							<div class="cristina-wrapper">
+
+								<div class="candidate-information">
+
+									<div class="candidate-information-text ml-3 mr-3">
+
+										<h4 class="candidate-information-title">Cristina Fernández de Kirchner</h4>
+										<p class="candidate-information-description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+
+										<div class="d-flex mt-2 flex-wrap">
+											<div><a class="btn-view-full-report">View Full Report</a></div>
+											<div class="ml-auto">
+												<p class="time-ago">1 month ago</p>
+												<p class="field-of-action">in Politics</p>
+											</div>
+										</div>
+
+									</div>
+
+									
+									<div class="custom-row mt-5">
+										<div class="col-3 btn-vote-like-wrapper"><a class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a><span class="like-dislikes-results">36%</span></div>
+										<div class="col-9 btn-vote-dislike-wrapper"><span class="like-dislikes-results">64% </span><a class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a></div>
+									</div>
+									
+	
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="malala-container col-12 col-md-6 mt-5">
+
+
+							<div class="malala-wrapper">
+
+								<div class="candidate-information">
+
+									<div class="candidate-information-text ml-3 mr-3">
+
+										<h4 class="candidate-information-title">Malala Yousafzai</h4>
+										<p class="candidate-information-description">Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+
+										<div class="d-flex mt-2 flex-wrap">
+											<div><a class="btn-view-full-report">View Full Report</a></div>
+											<div class="ml-auto">
+												<p class="time-ago">1 month ago</p>
+												<p class="field-of-action">in Entertaiment</p>
+											</div>
+										</div>
+
+									</div>
+
+									
+									<div class="custom-row mt-5">
+										<div class="col-9 btn-vote-like-wrapper"><a class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a><span class="like-dislikes-results">64%</span></div>
+										<div class="col-3 btn-vote-dislike-wrapper"><span class="like-dislikes-results">36% </span><a class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a></div>
+									</div>
+									
+	
+								</div>
+
+							</div>
+
+
+						</div>
+					
+
+					</div>
+					<!-- End Vote Component -->
+					
+					<div class="votes__message-submit row  mb-5">
+
+						<p class="message-submit__text">Is there anyone else you would want us to add?</p>
+						<a class="message-submit__btn-submit">Submit a Name</a>
+
+					</div>
+
+				</section>
+
+			</main>
+
+			<footer class="mt-5">
+
+				<div class="footer__more-info">
+
+					<ul class="footer__info-opciones">
+						<li class="footer__info-item"><a href="#" target="_blank">Terms and Conditions</a></li>
+						<li class="footer__info-item"><a href="#" target="_blank">Privacy Policy</a></li>
+						<li class="footer__info-item"><a href="#" target="_blank">Contact Us</a></li>
+					</ul>
+
+					<ul class="footer__social-networks ml-auto">
+						
+						<li class="footer__info-item"><a href="#" target="_blank">Follow Us</a></li>
+						<li class="footer__info-item"><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+						<li class="footer__info-item"><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						
+					</ul>
+
+				</div>
+				
+
+			</footer>
+
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="https://kit.fontawesome.com/41fe90599b.js"></script>		
+			<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+			<script src="assets/js/app.js"></script>
+			
+	</body>
+</html>
