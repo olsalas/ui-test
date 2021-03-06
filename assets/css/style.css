@@ -182,6 +182,10 @@ p.intro__text-to-closing-info {
   color: #000000;
 }
 
+.vote-card {
+  margin-top: 30px;
+}
+
 .kanye-wrapper {
   background-image: url("../img/kanye.png");
   height: 600px;
@@ -275,6 +279,12 @@ p.intro__text-to-closing-info {
   width: 80%;
   color: #ffffff;
   font-weight: 300;
+  margin: 0;
+}
+
+.voting-section {
+  margin-left: 10px;
+  margin-top: 20px;
 }
 
 .message-notice__close {
@@ -336,24 +346,43 @@ p.intro__text-to-closing-info {
   padding: 10px;
 }
 
+.btn-vote-now {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1em;
+  z-index: 1000;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn-vote-now:hover {
+  color: #ffffff;
+  background: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .btn-view-full-report:hover {
   color: #ffffff;
+  background: #000000;
   text-decoration: none;
   cursor: pointer;
 }
 
 .time-ago {
   color: #ffffff;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
   margin: 0;
 }
 
 .field-of-action {
   color: #ffffff;
-  font-size: 0.7em;
+  font-size: 0.9em;
   text-align: right;
   margin: 0;
+  font-weight: normal;
 }
 
 .message-submit__btn-submit:hover {
@@ -362,33 +391,65 @@ p.intro__text-to-closing-info {
   cursor: pointer;
 }
 
-.btn-vote-like-wrapper {
+.btn-vote-like {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #2fbdb7;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.btn-vote-like:hover {
+  cursor: pointer;
+  color: #ffffff;
+  border: solid 2px solid #ffffff;
+}
+
+.btn-vote-dislike {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #ffb533;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.btn-vote-dislike:hover {
+  cursor: pointer;
+  color: #ffffff;
+  border: solid 2px solid #ffffff;
+}
+
+.vote-like-wrapper {
   background-color: #2fbdb7;
   padding: 20px;
 }
 
-.btn-vote-dislike-wrapper {
+.vote-dislike-wrapper {
   background-color: #ffb533;
   text-align: right;
   padding: 20px;
 }
 
-.btn-vote-like {
+.vote-like {
   font-size: 1em;
   color: #ffffff;
 }
 
-.btn-vote-dislike {
+.vote-dislike {
   font-size: 1em;
   color: #ffffff;
 }
 
-.btn-vote-dislike:hover {
+.vote-dislike:hover {
   color: #ffffff;
   cursor: pointer;
 }
 
-.btn-vote-like:hover {
+.vote-like:hover {
   color: #ffffff;
   cursor: pointer;
 }
@@ -538,6 +599,10 @@ p.intro__text-to-closing-info {
   }
 
   .like-dislikes-results {
+    font-size: 1.5em;
+  }
+
+  .vote-like, .vote-dislike {
     font-size: 1.5em;
   }
 
