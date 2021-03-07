@@ -193,7 +193,7 @@ p.intro__text-to-closing-info {
   position: relative;
 }
 
-.candidate::before {
+.candidate-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -372,6 +372,10 @@ p.intro__text-to-closing-info {
   border: 2px solid #ffffff;
   padding: 10px;
   text-align: center;
+}
+
+.highlighted {
+  border: 2px solid #ffffff;
 }
 
 .btn-vote-now:hover {

@@ -53,22 +53,27 @@ let VOTE_TEMPLATE = `
 
 									<div class="candidate-information-text ml-3 mr-3">
 
-										<h4 class="candidate-information-title">{{ candidate.name }}</h4>
+                    <div class="row">
+                      <a class="col-1" v-if="likePercentage > dislikePercentage" class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                      <a class="col-1" v-if="likePercentage < dislikePercentage" class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                      <h4 class="candidate-information-title col-11">{{ candidate.name }}</h4>
+                    </div>
+										
 										<p class="time-ago">1 month ago <span class="field-of-action">{{ candidate.category }}</span></p>
 										<p class="candidate-information-description">{{ candidate.description }}</p>
 
 										<div class="voting-section">
-											<a class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
-											<a class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
-											<a class="btn-vote-now">Vote Now</a>
+											<a  @click="likeVote" :class="{ highlighted: likeActive }" class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+											<a  @click="dislikeVote" :class="{ highlighted: dislikeActive }" class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+											<a  @click="vote" class="btn-vote-now">{{this.voteText}}</a>
 										</div>
 
 									</div>
 
 									
 									<div class="custom-row mt-3">
-										<div class="col-9 vote-like-wrapper"><a class="vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a><span class="like-dislikes-results">{{ candidate.likes }}</span></div>
-										<div class="col-3 vote-dislike-wrapper"><span class="like-dislikes-results">{{ candidate.dislikes }} </span><a class="vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a></div>
+										<div :style="{flex: '0 0 ' + likePercentage + '%' , maxWidth: likePercentage + '%'}" class="vote-like-wrapper"><a class="vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a><span class="like-dislikes-results">{{ likePercentage }}%</span></div>
+										<div :style="{flex: '0 0 ' + dislikePercentage + '%' , maxWidth: dislikePercentage + '%'}" class="vote-dislike-wrapper"><span class="like-dislikes-results">{{ dislikePercentage }}% </span><a  class="vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a></div>
 									</div>
 									
 	
@@ -85,26 +90,81 @@ let VOTE_TEMPLATE = `
 Vue.component('vote-candidate', {
     data: function () {
       return {
-        name: '',
-        likes: 0,
-        dislikes: 0,
-        description: '',
-        category: '',
-        total: 0,
-        imagen: this.$props.candidate.photo
+        likes: this.$props.candidate.likes,
+        dislikes: this.$props.candidate.dislikes,
+        likePercentage: 0,
+        dislikePercentage: 0,
+        votes: this.$props.candidate.votes,
+        likeActive: false,
+        dislikeActive: false,
+        imagen: this.$props.candidate.photo,
+        voteDone: false,
+        voteText: 'Vote Now'
       }
     },
-    created(){
-
-        /*let pathname = window.location.pathname;
-        let path = pathname.split("/");
-        let filename = path[path.length - 1] ;
-        console.log('pagina ',filename);
-        let baseUrl = pathname.replace(filename,"")
+    mounted(){
 
 
-        this.imagen = baseUrl + this.imagen;
-        console.log(this.imagen);*/
+      this.percentage();
+      
+    },
+    methods: {
+
+      percentage(){
+
+        if(this.votes > 0){
+
+          this.likePercentage = Math.round((this.likes / this.votes) * 100 );
+          this.dislikePercentage = Math.round( (this.dislikes / this.votes) * 100 );
+  
+        }
+      },
+
+      likeVote() {
+
+        this.likeActive = true;
+        this.dislikeActive = false;
+
+
+      },
+
+      dislikeVote() {
+        this.likeActive = false;
+        this.dislikeActive = true;
+      },
+
+      vote() {
+        
+        if(this.likeActive || this.dislikeActive){
+
+          this.voteDone = true;
+          this.voteText = 'Vote Again';
+          
+
+          this.votes += 1;
+          
+          if(this.likeActive){
+              this.likes = this.likes + 1;
+          }else{
+              this.dislikes = this.dislikes + 1;
+          }
+
+          this.likeActive = false;
+          this.dislikeActive = false;
+
+          this.percentage();
+
+          swal( "Good Job!","Thank you for voting!", "success");
+
+        }else{
+
+          swal( "You must select an option!","Choose thumbs up or thumbs down", "error");
+        }
+        
+      }
+
+
+
     },
     props: ['candidate'],
     template: VOTE_TEMPLATE
