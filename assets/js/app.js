@@ -54,8 +54,8 @@ let VOTE_TEMPLATE = `
 									<div class="candidate-information-text ml-3 mr-3">
 
                     <div class="row">
-                      <a class="col-1" v-if="likePercentage > dislikePercentage" class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
-                      <a class="col-1" v-if="likePercentage < dislikePercentage" class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                      <a  v-if="likePercentage > dislikePercentage" class="btn-vote-like"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                      <a  v-if="likePercentage < dislikePercentage" class="btn-vote-dislike"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
                       <h4 class="candidate-information-title col-11">{{ candidate.name }}</h4>
                     </div>
 										
@@ -104,6 +104,21 @@ Vue.component('vote-candidate', {
     },
     mounted(){
 
+      //check in local storage if data exists otherwise save information.
+      let item = localStorage.getItem(this.$props.candidate.name);
+      
+      if(item){
+
+        let itemJson = JSON.parse(item);
+
+        this.likes = itemJson.likes;
+        this.dislikes = itemJson.dislikes;
+        this.votes = itemJson.votes;
+
+      }
+
+
+
 
       this.percentage();
       
@@ -148,6 +163,15 @@ Vue.component('vote-candidate', {
           }else{
               this.dislikes = this.dislikes + 1;
           }
+
+          let itemToStore = {
+              likes: this.likes,
+              dislikes: this.dislikes,
+              votes: this.votes
+          };
+
+          localStorage.setItem(this.$props.candidate.name, JSON.stringify(itemToStore));
+       
 
           this.likeActive = false;
           this.dislikeActive = false;
